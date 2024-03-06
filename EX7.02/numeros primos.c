@@ -1,13 +1,13 @@
 #include <stdio.h>
 #include <locale.h>
 
-// Elabore um programa que exibe todos os números primos existentes entre 
-// x e y, onde x e y devem ser números naturais maiores que zero e fornecidos
-// pelo usuário.
+// Elabore um programa que exibe todos os nÃºmeros primos existentes entre 
+// x e y, onde x e y devem ser nÃºmeros naturais maiores que zero e fornecidos
+// pelo usuÃ¡rio.
 
-// *Exemplo: Se x = 2 e y = 7, o programa deve exibir os números 2, 3, 5 e 7.
+// *Exemplo: Se x = 2 e y = 7, o programa deve exibir os nÃºmeros 2, 3, 5 e 7.
 
-// *Obs.: não esqueça de verificar se o intervalo fornecido é válido.
+// *Obs.: nÃ£o esqueÃ§a de verificar se o intervalo fornecido Ã© vÃ¡lido.
 
 int main(void)
 {
@@ -15,35 +15,35 @@ int main(void)
     
     setlocale(LC_ALL, "portuguese");
 	
-	printf("Digite o inicio do seu intervalo (número natural maior que zero!): ");
+	printf("Digite o inicio do seu intervalo (nÃºmero natural maior que zero!): ");
 		scanf("%i", &x);
 		
-    printf("Digite o fim do seu intervalo (número natural maior que zero!): ");
+    printf("Digite o fim do seu intervalo (nÃºmero natural maior que zero!): ");
 		scanf("%i", &y);
 		
-			if (x <= 0 || y <= 0 || x > y) 
+			if (x <= 1 || y <= 1 || x > y) 
 			{
-			 printf("Intervalo inválido. Certifique-se de que x e y sejam números naturais maiores que zero e que x seja menor ou igual a y.\n");
+			 printf("Intervalo invÃ¡lido. Certifique-se de que x e y sejam nÃºmeros naturais maiores que zero e que x seja menor ou igual a y.\n");
 			 return 1;	
 			}
 			
-	printf("\nNúmeros primos no intervalo entre %i e %i:\n ", x,y );
+	printf("\nNÃºmeros primos no intervalo entre %i e %i:\n ", x,y );
 	
 		for (i = x; i <= y; i++)
 		{
-		   int primo = 1; // Assume que o número é primo.
+		   int primo = 1; // Assume que o nÃºmero Ã© primo.
 		
 		if (x <= 1) 
 		 {
-			primo = 0; // Assume que o número não é primo porque números menores ou iguais a 1 não são primos.
+			primo = 0; // Assume que o nÃºmero nÃ£o Ã© primo porque nÃºmeros menores ou iguais a 1 nÃ£o sÃ£o primos.
 		 }
 		 else
 		{
-			for (j = 2; j*j <= i; ++j) //A variável j é utilizada para iterar sobre os possíveis divisores do número i para verificar se ele é primo ou não. No trecho de código:
+			for (j = 2; j*j <= i; ++j) //A variÃ¡vel j Ã© utilizada para iterar sobre os possÃ­veis divisores do nÃºmero i para verificar se ele Ã© primo ou nÃ£o. No trecho de cÃ³digo:
 			{
 				if (i % j == 0) 
 				{
-				primo = 0; // Não é primo
+				primo = 0; // NÃ£o Ã© primo
 				break;
 				}
 			}
