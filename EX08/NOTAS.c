@@ -19,9 +19,11 @@ int main(int argc, char** argv)
  	printf("Nota 3:");
  		scanf("%f",&nt3);
  		
+			
     result = notas(nt1,nt2,nt3);
+				printf("\nA sua mÃ©dia final foi de: %.0f\n", result);
  	conceito(result);	
-    printf("\nA sua média final foi de: %.0f\n", result);
+    
     
 	return 0;
 }
@@ -34,19 +36,19 @@ void conceito(float nota)
 {
 	if (nota >= 9) 
 	{
-	printf("\nVocê tirou uma nota A");	
+	printf("\nVocÃª tirou uma nota A");	
 	} 
 	else if (nota >= 7 && nota <9) 
 	{
-	printf("\nVocê tirou uma nota B");	
+	printf("\nVocÃª tirou uma nota B");	
 	} else if (nota >= 6 && nota <7) 
 	{
-      printf("\nVocê tirou uma nota C");
+      printf("\nVocÃª tirou uma nota C");
 	} else if (nota >= 4 && nota <6) 
 	{
-	printf("\nVocê tirou uma nota D");	
+	printf("\nVocÃª tirou uma nota D");	
 	} else
 	{
-      printf("\nVocê tirou uma nota E");
+      printf("\nVocÃª tirou uma nota E");
 	}
 }
